@@ -1,6 +1,6 @@
 function! CreateCenteredFloatingWindow(widthRate, heightRate)
-    let width = float2nr(&columns * widthRate)
-    let height = float2nr(&lines * widthRate)
+    let width = float2nr(&columns * a:widthRate)
+    let height = float2nr(&lines * a:heightRate)
     let top = ((&lines - height) / 2) - 1
     let left = (&columns - width) / 2
     let opts = {'relative': 'editor', 'row': top, 'col': left, 'width': width, 'height': height, 'style': 'minimal'}
